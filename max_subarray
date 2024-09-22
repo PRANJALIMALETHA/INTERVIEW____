@@ -1,0 +1,41 @@
+import java.util.*;
+public class maxiumsubarray {
+    public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+
+    //initailaize an array
+    int array[]=new int[size];
+    //input the lements into tharray
+
+    for(int i=0;i<size;i++){
+        array[i]=sc.nextInt();
+    }
+
+    //to find maxiumsubarray
+
+    int cs=0;
+    int max=Integer.MIN_VALUE;
+
+    for(int i=0;i<array.length;i++)
+    {
+      cs+=array[i];
+      if(max>cs){
+      max=Math.max(cs,max);
+      }
+      if(cs<0)
+      {
+        cs=0;
+      }
+
+    }
+     
+
+
+   }
+
+
+    
+
+    
+}
